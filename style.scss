@@ -16,6 +16,7 @@ header {
     display: flex;
     padding:5px 0px 5px 0px;
     border-bottom:1px $black solid;
+    margin:0px 0px 25px 0px;
     & .logo {
         a {
             text-decoration: none;
@@ -65,7 +66,7 @@ header {
 }
 
 section.trend-posts {
-    margin:25px 0px 25px 0px;
+    margin:0px 0px 25px 0px;
     padding: 0px 0px 15px 0px;
     border-bottom:1px solid $gray;
     clear:bottom;
@@ -134,6 +135,11 @@ section.trend-posts {
 }
 
 section.body-blog {
+   & .archive-title {
+    font-family: $default-font;
+    font-weight: $fw-700;
+    margin-bottom: 25px;
+   }
    & .all-posts {
     & .blog-post {
         margin:0px 0px 20px 0px;
@@ -330,4 +336,238 @@ footer {
             font-family: $default-font;
             colo:$black;
         }
+}
+
+section.single-page {
+    margin:0px 0px 25px 0px;
+    & .author {
+        display: flex;
+        align-items: center;
+        gap:6px;
+        margin-bottom:6px;
+        & .author-image {
+            img {
+                width:30px;
+                height: 30px;
+                border-radius:100%;
+                object-fit: cover;
+            }
+        }
+
+        & .author-name {
+            a {
+                font-family: $default-font;
+                font-size:0.8em;
+                font-weight: $fw-400;
+                color:$black;
+                text-decoration: none;
+            }
+        }
+    }
+    
+    & .post-date {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-family: $default-font;
+            font-size:0.8em;
+            font-weight: $fw-300;
+            color:$dark-gray;
+            @media (max-width:768px) {
+                justify-content: flex-start;
+                margin-bottom:6px;
+            }
+    }
+
+    img.post-thumbnail {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom:6px;
+    }
+
+    & .post-share {
+        ul {
+            display: flex;
+            gap:6px;
+            list-style: none;
+            padding:0px 0px 0px 0px;
+            margin:6px 0px 6px 0px;
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $light-gray;
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                &:hover {
+                    background-color: $dark-gray;
+                    a {
+                        color:$light-gray;
+                    }
+                }
+                a {
+                    color:$dark-gray;
+                }
+            }
+        }
+    }
+
+    h1 {
+        font-family: $default-font;
+        font-weight: $fw-700;
+        margin-bottom: 16px;
+    }
+
+    & .single-content {
+        p {
+            font-family: $default-font;
+        }
+
+        & .text-justify {
+            text-align: justify;
+        }
+    }
+
+    ul.post-categories {
+        display: flex;
+        gap:6px;
+        list-style: none;
+        padding:0px 0px 0px 0px;
+        li{
+            a{
+                font-family: $default-font;
+                font-size:0.9em;
+                font-weight:$fw-300;
+                color:$dark-gray;
+                text-decoration: none;
+                background:$light-gray;
+                padding:5px 10px;
+                border-radius: 20px;
+            }
+
+            a:hover {
+                color:$light-gray;
+                background-color: $dark-gray;
+            }
+            
+        }
+    }
+
+    & .author-section {
+        padding:25px 0px 25px 0px;
+        border-top:1px solid $light-gray;
+        border-bottom:1px solid $light-gray;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            width:100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 100%;
+            margin-bottom:1em;
+        }
+        a{
+            font-family: $default-font;
+            font-weight: $fw-700;
+            font-size:1.4em;
+            color:$black;
+            text-decoration: none;
+        }
+        p {
+            font-family: $default-font;
+            color:$dark-gray;
+            text-align: center;
+        }
+
+        ul {
+            padding: 0px 0px 0px 0px;
+            display: flex;
+            list-style: none;
+            gap:6px;
+            margin:6px 0px 6px 0px;
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $light-gray;
+                width: 40px;
+                height: 40px;
+                border-radius: 100%;
+                &:hover {
+                    background-color: $dark-gray;
+                    a {
+                        color:$light-gray;
+                    }
+                }
+                a {
+                    color:$dark-gray;
+                }
+            }
+        }
+    }
+}
+
+section.related-posts {
+    margin:0px 0px 50px 0px;
+    h3 {
+        font-family: $default-font;
+        margin-bottom: 1em;
+    }
+
+    & .related-post {
+        margin-bottom:20px;
+        a {
+            text-decoration: none;
+            img {
+                width: 100%;
+                height: 150px;
+                object-fit:cover;
+                border-radius: 5px;
+                margin-bottom:0.4em;
+            }
+
+            h2 {
+                font-family: $default-font;
+                font-size:1em;
+                font-weight: $fw-700;
+                color:$black;
+                margin-bottom:4px;
+            }
+        }
+
+        & .author {
+            display: flex;
+            align-items: center;
+            gap:6px;
+            margin-bottom:6px;
+            & .author-image {
+                img {
+                    width:30px;
+                    height: 30px;
+                    border-radius:100%;
+                    object-fit: cover;
+                }
+            }
+
+            & .author-name {
+                a {
+                    font-family: $default-font;
+                    font-size:0.8em;
+                    font-weight: $fw-400;
+                    color:$black;
+                }
+            }
+        }
+
+        & .post-date {
+            font-family: $default-font;
+            font-size:0.7em;
+            font-weight: $fw-300;
+            color:$dark-gray;
+        }
+    
+    }
 }
